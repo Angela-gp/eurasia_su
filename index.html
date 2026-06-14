@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f50646">
+  <title>Евразия Вместе</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="login-screen" id="login-screen">
+    <div class="login-brand">
+      <div class="login-pattern pattern-a"></div><div class="login-pattern pattern-b"></div>
+      <div class="login-brand-content"><span class="logo-mark">Е</span><span class="tag light">ЕВРАЗИЯ ВМЕСТЕ</span><h1>Добрые дела<br>начинаются здесь.</h1><p>Единая платформа для волонтеров, организаций и партнеров.</p></div>
+    </div>
+    <div class="login-panel">
+      <form id="login-form" class="login-form">
+        <span class="eyebrow">Вход в платформу</span><h2>С возвращением!</h2><p>Войдите в свой кабинет. Доступные возможности зависят от вашей роли.</p>
+        <label>Email<input id="login-email" type="email" placeholder="name@eurasia.org" required></label>
+        <label>Пароль<input id="login-password" type="password" placeholder="Введите пароль" required></label>
+        <div id="login-error" class="login-error"></div>
+        <button class="primary wide" type="submit">Войти</button>
+        <div class="demo-title"><span>Демо-аккаунты</span></div>
+        <button type="button" class="demo-account" data-demo-user="volunteer"><span class="person-avatar">АИ</span><div><b>Участник</b><small>alia@eurasia.org · demo2026</small></div><strong>→</strong></button>
+        <button type="button" class="demo-account" data-demo-user="organization"><span class="person-avatar purple-bg">ЧГ</span><div><b>Организация</b><small>organizer@eurasia.org · org2026</small></div><strong>→</strong></button>
+        <button type="button" class="demo-account" data-demo-user="partner"><span class="person-avatar partner-avatar">СБ</span><div><b>Партнер</b><small>partner@eurasia.org · partner2026</small></div><strong>→</strong></button>
+        <button type="button" class="demo-account" data-demo-user="admin"><span class="person-avatar admin-avatar">AD</span><div><b>Администратор</b><small>admin@eurasia.org · admin2026</small></div><strong>→</strong></button>
+      </form>
+    </div>
+  </section>
+  <aside class="sidebar">
+    <button class="logo" data-page="home" aria-label="На главную">
+      <span class="logo-mark">Е</span>
+      <span>ЕВРАЗИЯ<br><b>ВМЕСТЕ</b></span>
+    </button>
+    <nav>
+      <button class="nav-item active" data-page="home" data-roles="volunteer"><span>⌂</span> Главная</button>
+      <button class="nav-item" data-page="events" data-roles="volunteer,organization,partner,admin"><span>◇</span> Мероприятия</button>
+      <button class="nav-item" data-page="missions" data-roles="volunteer"><span>✓</span> Миссии</button>
+      <button class="nav-item" data-page="rewards" data-roles="volunteer,partner,admin"><span>✦</span> Награды</button>
+      <button class="nav-item" data-page="profile" data-roles="volunteer,organization,partner,admin"><span>○</span> Профиль</button>
+      <button class="nav-item" data-page="wallet" data-roles="volunteer"><span>E</span> Кошелек</button>
+      <button class="nav-item" data-page="social" data-roles="volunteer"><span>+</span> Друзья и чат</button>
+      <button class="nav-item role-link" data-page="organization" data-roles="organization"><span>▣</span> Кабинет организации</button>
+      <button class="nav-item role-link" data-page="partner" data-roles="partner"><span>✦</span> Кабинет партнера</button>
+      <button class="nav-item role-link" data-page="admin" data-roles="admin"><span>⚙</span> Админ-панель</button>
+    </nav>
+    <div class="side-card" data-roles="volunteer">
+      <span class="eyebrow">Твой уровень</span>
+      <strong>Амбассадор</strong>
+      <div class="progress"><i style="width:72%"></i></div>
+      <small>280 XP до нового уровня</small>
+    </div>
+    <div class="current-user"><span id="side-user-name">Алия</span><small id="side-user-role">Участник</small></div>
+    <button class="help" data-action="logout">↩ <span>Выйти</span></button>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <button class="mobile-logo logo" data-page="home"><span class="logo-mark">Е</span><span>ВМЕСТЕ</span></button>
+        <p class="page-kicker">Среда, 10 июня</p>
+        <h1 id="page-title">Добрый день, Алия!</h1>
+      </div>
+      <div class="header-actions">
+        <span class="header-role" id="header-role">Участник</span>
+        <button class="token-pill" data-page="wallet" data-roles="volunteer"><span class="coin">E</span><b id="balance">1 240</b><small>токенов</small></button>
+        <button class="icon-button" id="notification-button" aria-label="Уведомления">♢<i>3</i></button>
+        <button class="icon-button header-logout" data-action="logout" aria-label="Выйти">↩</button>
+        <button class="avatar" data-page="profile" id="header-avatar">АИ</button>
+      </div>
+    </header>
+
+    <section class="page active" id="home">
+      <div class="hero">
+        <div class="hero-shape shape-one"></div>
+        <div class="hero-shape shape-two"></div>
+        <div class="hero-content">
+          <span class="tag light">ЕВРАЗИЯ ОБЪЕДИНЯЕТ</span>
+          <h2>Делай добро.<br>Получай больше.</h2>
+          <p>Участвуй в событиях, выполняй полезные миссии и обменивай социальные токены на впечатления.</p>
+          <button class="primary white" data-page="events">Найти мероприятие <span>→</span></button>
+        </div>
+        <div class="hero-stat">
+          <span>Твой вклад</span>
+          <strong>48</strong>
+          <small>часов волонтерства</small>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div><span class="eyebrow">Ближайшее</span><h2>Твое следующее событие</h2></div>
+        <button class="text-button" data-page="events">Все события →</button>
+      </div>
+      <article class="next-event">
+        <div class="event-art clean-art"><span>15</span><small>ИЮНЯ</small></div>
+        <div class="event-info">
+          <div><span class="tag purple">ЭКОЛОГИЯ</span><span class="tag soft">Алматы</span></div>
+          <h3>Чистые берега Большой Алматинки</h3>
+          <p>Соберемся вместе, чтобы вернуть любимому месту его естественную красоту.</p>
+          <div class="meta"><span>◷ 09:00–13:00</span><span>⌖ Парк Первого Президента</span><span>26 участников</span></div>
+        </div>
+        <div class="event-reward"><span>Награда</span><strong>+180 <i>E</i></strong><button class="primary" data-action="checkin">QR check-in</button></div>
+      </article>
+
+      <div class="two-columns">
+        <div>
+          <div class="section-heading compact"><div><span class="eyebrow">Быстрый старт</span><h2>Миссии дня</h2></div><button class="text-button" data-page="missions">Все →</button></div>
+          <div id="home-missions" class="stack"></div>
+        </div>
+        <div>
+          <div class="section-heading compact"><div><span class="eyebrow">Сообщество</span><h2>Сейчас вместе</h2></div></div>
+          <div class="community-card">
+            <div class="people"><span>М</span><span>Д</span><span>Р</span><span>+84</span></div>
+            <strong>1 842 добрых дела</strong>
+            <p>совершили участники сообщества в этом месяце</p>
+            <div class="impact"><div><b>620</b><small>часов</small></div><div><b>38</b><small>событий</small></div><div><b>12</b><small>городов</small></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="events">
+      <div class="filters"><button class="chip active">Все</button><button class="chip">Экология</button><button class="chip">Образование</button><button class="chip">Помощь людям</button><button class="chip">Культура</button></div>
+      <div class="page-intro"><div><span class="eyebrow">Делай важное рядом</span><h2>Мероприятия</h2></div><label class="search">⌕ <input placeholder="Найти событие"></label></div>
+      <div id="events-grid" class="card-grid"></div>
+    </section>
+
+    <section class="page" id="missions">
+      <div class="page-intro"><div><span class="eyebrow">Маленькие шаги, большой результат</span><h2>Миссии</h2></div><div class="mission-progress"><b>3 из 5</b><span>недельная цель</span></div></div>
+      <div class="mission-hero"><div><span class="tag light">МИССИЯ НЕДЕЛИ</span><h2>Пригласи друга<br>в сообщество</h2><p>Вместе делать добро проще. Поделись персональной ссылкой и получи токены.</p><button class="primary white" data-action="copy">Скопировать ссылку</button></div><strong>+100 <i>E</i></strong></div>
+      <div id="missions-list" class="mission-list"></div>
+    </section>
+
+    <section class="page" id="rewards">
+      <div class="page-intro"><div><span class="eyebrow">Твой вклад возвращается</span><h2>Награды</h2></div><div class="wallet"><span>Доступно</span><b><i>E</i> <span id="balance-rewards">1 240</span></b></div></div>
+      <div class="filters"><button class="chip active">Для тебя</button><button class="chip">Впечатления</button><button class="chip">Обучение</button><button class="chip">Мерч</button><button class="chip">Скидки</button></div>
+      <div id="rewards-grid" class="card-grid reward-grid"></div>
+    </section>
+
+    <section class="page" id="profile">
+      <div class="profile-cover"><div class="profile-photo" id="profile-photo">АИ</div><div class="profile-name"><span class="tag light" id="profile-type">АМБАССАДОР</span><h2 id="profile-display-name">Алия Ибрагимова</h2><p id="profile-display-meta">Алматы · Экология, образование, культура</p></div><button class="primary white" data-action="edit">Редактировать профиль</button></div>
+      <div class="profile-stats" id="profile-stats"><div><b id="balance-profile">1 240</b><span>токенов</span></div><div><b>48</b><span>часов</span></div><div><b>12</b><span>мероприятий</span></div><div><b>8</b><span>достижений</span></div></div>
+      <div class="profile-details">
+        <div><span class="eyebrow">Город</span><b id="profile-detail-city">Алматы</b></div>
+        <div><span class="eyebrow">Интересы</span><b id="profile-detail-interests">Экология, образование, культура</b></div>
+        <div><span class="eyebrow">Контакты</span><b id="profile-detail-contacts">alia@eurasia.org</b></div>
+        <div><span class="eyebrow">Социальная сеть</span><a id="profile-detail-social" href="#" target="_blank" rel="noopener">@aliya_good</a></div>
+      </div>
+      <div class="profile-layout" id="profile-extra">
+        <div class="profile-panel"><div class="section-heading compact"><div><span class="eyebrow">Еще немного</span><h2>Профиль заполнен на 80%</h2></div><strong class="purple-text">+20 E</strong></div><div class="progress"><i style="width:80%"></i></div><button class="profile-task" data-action="profile-task"><span>＋</span><div><b>Добавь ссылку на социальную сеть</b><small>Награда за заполнение профиля</small></div><strong>+5 E</strong></button></div>
+        <div class="profile-panel"><span class="eyebrow">Последняя активность</span><div class="timeline"><div><i>✓</i><p><b>Выполнена миссия «Один день без пластика»</b><small>Сегодня · +30 токенов</small></p></div><div><i>◇</i><p><b>Участие в фестивале культур</b><small>7 июня · +150 токенов</small></p></div><div><i>✦</i><p><b>Получен бейдж «Сила команды»</b><small>2 июня</small></p></div></div></div>
+      </div>
+    </section>
+
+    <section class="page" id="wallet">
+      <div class="page-intro"><div><span class="eyebrow">Прозрачная токеномика</span><h2>Кошелек Social Tokens</h2></div><button class="primary" data-action="calculator">Калькулятор токенов</button></div>
+      <div class="wallet-summary">
+        <div class="balance-card"><span>Текущий баланс</span><strong><i>E</i> <b id="balance-wallet">1 240</b></strong><small>Токены нельзя купить или перевести: они отражают социальный вклад</small></div>
+        <div class="metric-card"><span>Получено за месяц</span><b id="earned-month">+540 E</b><small>7 подтвержденных действий</small></div>
+        <div class="metric-card"><span>Потрачено за месяц</span><b id="spent-month">−350 E</b><small>2 награды партнеров</small></div>
+        <div class="metric-card"><span>Ожидает проверки</span><b id="pending-total">+80 E</b><small>2 действия на модерации</small></div>
+      </div>
+      <div class="dashboard-grid">
+        <div class="data-panel"><div class="panel-head"><div><span class="eyebrow">Все операции</span><h3>История токенов</h3></div><select><option>Все операции</option><option>Начисления</option><option>Списания</option></select></div><div id="transactions" class="transaction-list"></div></div>
+        <div class="data-panel"><div class="panel-head"><div><span class="eyebrow">Как начисляются токены</span><h3>Активные правила</h3></div></div><div id="user-rules" class="rule-list"></div></div>
+      </div>
+    </section>
+
+    <section class="page" id="social">
+      <div class="page-intro"><div><span class="eyebrow">Социальная сеть добрых дел</span><h2>Друзья и сообщения</h2></div><label class="search">⌕ <input placeholder="Найти волонтера"></label></div>
+      <div class="social-layout">
+        <div class="data-panel"><div class="panel-head"><div><span class="eyebrow">Рекомендации</span><h3>Люди рядом</h3></div><span class="status-badge">3 общих интереса</span></div><div id="people-list" class="people-list"></div></div>
+        <div class="chat-panel">
+          <div class="chat-head"><div class="person-avatar purple-bg">МК</div><div><b>Марат Касымов</b><small>онлайн · ваш друг</small></div><button class="icon-button">⋯</button></div>
+          <div id="messages" class="messages"><div class="message their">Привет! Ты идешь на уборку берега в субботу?<small>10:42</small></div><div class="message mine">Да, уже записалась. Встретимся у входа в парк?<small>10:44 · прочитано</small></div><div class="message their">Отлично, буду там к девяти!<small>10:45</small></div></div>
+          <form id="chat-form" class="chat-input"><input id="chat-text" placeholder="Написать сообщение..." autocomplete="off"><button class="primary">Отправить</button></form>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="organization">
+      <div class="role-banner org-banner"><div><span class="tag light">КАБИНЕТ ОРГАНИЗАЦИИ</span><h2>Фонд «Чистый город»</h2><p>Верифицированная организация · Алматы</p></div><div class="role-actions"><button class="primary white" data-action="org-profile">Профиль организации</button><button class="primary white" data-action="create-event">+ Создать мероприятие</button></div></div>
+      <div class="wallet-summary"><div class="metric-card"><span>Активные события</span><b>4</b><small>еще 2 на модерации</small></div><div class="metric-card"><span>Участники</span><b>186</b><small>+24 за неделю</small></div><div class="metric-card"><span>Подтверждено участий</span><b>142</b><small>76% от регистраций</small></div><div class="metric-card"><span>Выдано токенов</span><b>24 580 E</b><small>назначено администратором</small></div></div>
+      <div class="dashboard-grid">
+        <div class="data-panel"><div class="panel-head"><div><span class="eyebrow">Управление</span><h3>Мероприятия организации</h3></div></div><div id="org-events" class="moderation-list"></div></div>
+        <div class="data-panel"><div class="panel-head"><div><span class="eyebrow">Следующее событие</span><h3>Подтверждение участников</h3></div><button class="primary" data-action="confirm-all">Подтвердить всех</button></div><div id="participants" class="participant-list"></div></div>
+      </div>
+    </section>
+
+    <section class="page" id="partner">
+      <div class="role-banner partner-banner"><div><span class="tag light">КАБИНЕТ ПАРТНЕРА</span><h2>Сеть кофеен «Соседи»</h2><p>Верифицированный партнер · награды и выдача предложений</p></div><button class="primary white" data-action="create-reward">+ Создать награду</button></div>
+      <div class="wallet-summary"><div class="metric-card"><span>Активные награды</span><b id="partner-active">4</b><small>1 ожидает модерации</small></div><div class="metric-card"><span>Выдано за месяц</span><b id="partner-issued">128</b><small>+18% к прошлому месяцу</small></div><div class="metric-card"><span>Ожидает выдачи</span><b id="partner-pending">3</b><small>покажут промокод</small></div><div class="metric-card"><span>Конверсия</span><b>64%</b><small>резерв → получение</small></div></div>
+      <div class="dashboard-grid">
+        <div class="data-panel"><div class="panel-head"><div><span class="eyebrow">Каталог партнера</span><h3>Мои награды</h3></div></div><div id="partner-rewards" class="moderation-list"></div></div>
+        <div class="data-panel"><div class="panel-head"><div><span class="eyebrow">Проверка промокодов</span><h3>Ожидают выдачи</h3></div></div><div id="partner-redemptions" class="participant-list"></div></div>
+      </div>
+    </section>
+
+    <section class="page" id="admin">
+      <div class="role-banner admin-banner"><div><span class="tag light">АДМИНИСТРАТИВНАЯ ПАНЕЛЬ</span><h2>Контроль платформы</h2><p>Модерация, токеномика и активность системы</p></div><button class="primary white" data-action="new-rule">+ Новое правило</button></div>
+      <div class="wallet-summary"><div class="metric-card"><span>Пользователей</span><b>12 480</b><small>+8.4% за месяц</small></div><div class="metric-card"><span>На модерации</span><b id="moderation-count">7</b><small>события, миссии, заявки</small></div><div class="metric-card"><span>Токенов начислено</span><b>1.84M E</b><small>антифрод: 98.7% чистых</small></div><div class="metric-card"><span>Жалобы</span><b>3</b><small>1 требует реакции</small></div></div>
+      <div class="admin-tabs filters"><button class="chip active" data-admin-tab="moderation">Модерация</button><button class="chip" data-admin-tab="rules">Правила токенов</button><button class="chip" data-admin-tab="users">Пользователи и жалобы</button><button class="chip" data-admin-tab="audit">Журнал решений</button><button class="chip" data-admin-tab="analytics">Аналитика</button></div>
+      <div id="admin-content"></div>
+    </section>
+  </main>
+
+  <nav class="mobile-nav">
+    <button class="active" data-page="home" data-roles="volunteer"><span>⌂</span>Главная</button><button data-page="events" data-roles="volunteer,organization,partner,admin"><span>◇</span>События</button><button data-page="missions" data-roles="volunteer"><span>✓</span>Миссии</button><button data-page="rewards" data-roles="volunteer,partner,admin"><span>✦</span>Награды</button><button data-page="profile" data-roles="volunteer,organization,partner,admin"><span>○</span>Профиль</button><button data-page="organization" data-roles="organization"><span>▣</span>Кабинет</button><button data-page="partner" data-roles="partner"><span>✦</span>Кабинет</button><button data-page="admin" data-roles="admin"><span>⚙</span>Панель</button>
+  </nav>
+
+  <div class="toast" id="toast"></div>
+  <div class="modal-backdrop" id="modal">
+    <div class="modal"><button class="modal-close" data-action="close">×</button><div id="modal-icon" class="modal-icon">✓</div><h2 id="modal-title">Готово!</h2><p id="modal-text"></p><button class="primary wide" data-action="close">Продолжить</button></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
